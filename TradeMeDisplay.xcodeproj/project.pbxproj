@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		566F02AF1E6AC420009554E8 /* TMDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 566F02AE1E6AC420009554E8 /* TMDataStore.m */; };
+		566F02B21E6B4546009554E8 /* TMNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 566F02B11E6B4546009554E8 /* TMNetworkService.m */; };
+		56724DAB1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DAA1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m */; };
+		56724DAE1E6B6304007F6C57 /* TMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DAD1E6B6304007F6C57 /* TMCategory.m */; };
 		56B360481E6A7C86004E0126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B360471E6A7C86004E0126 /* main.m */; };
 		56B3604B1E6A7C86004E0126 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3604A1E6A7C86004E0126 /* AppDelegate.m */; };
 		56B3604E1E6A7C86004E0126 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3604D1E6A7C86004E0126 /* ViewController.m */; };
@@ -15,6 +19,7 @@
 		56B360561E6A7C86004E0126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B360541E6A7C86004E0126 /* LaunchScreen.storyboard */; };
 		56B360611E6A7C86004E0126 /* TradeMeDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B360601E6A7C86004E0126 /* TradeMeDisplayTests.m */; };
 		56B3606C1E6A7C86004E0126 /* TradeMeDisplayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3606B1E6A7C86004E0126 /* TradeMeDisplayUITests.m */; };
+		FD5E01793F3D41B9B8752B09 /* libPods-TradeMeDisplay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC811FEC19533C52F1FA1E2 /* libPods-TradeMeDisplay.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		566F02AD1E6AC420009554E8 /* TMDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataStore.h; sourceTree = "<group>"; };
+		566F02AE1E6AC420009554E8 /* TMDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataStore.m; sourceTree = "<group>"; };
+		566F02B01E6B4546009554E8 /* TMNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMNetworkService.h; sourceTree = "<group>"; };
+		566F02B11E6B4546009554E8 /* TMNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMNetworkService.m; sourceTree = "<group>"; };
+		56724DA91E6B62A9007F6C57 /* NSDictionary+SafeConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeConvert.h"; sourceTree = "<group>"; };
+		56724DAA1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeConvert.m"; sourceTree = "<group>"; };
+		56724DAC1E6B6304007F6C57 /* TMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCategory.h; sourceTree = "<group>"; };
+		56724DAD1E6B6304007F6C57 /* TMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCategory.m; sourceTree = "<group>"; };
 		56B360431E6A7C86004E0126 /* TradeMeDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeMeDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B360471E6A7C86004E0126 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56B360491E6A7C86004E0126 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +64,9 @@
 		56B360671E6A7C86004E0126 /* TradeMeDisplayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMeDisplayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B3606B1E6A7C86004E0126 /* TradeMeDisplayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TradeMeDisplayUITests.m; sourceTree = "<group>"; };
 		56B3606D1E6A7C86004E0126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EC811FEC19533C52F1FA1E2 /* libPods-TradeMeDisplay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TradeMeDisplay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E06F3CB9DD52A1103052609 /* Pods-TradeMeDisplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMeDisplay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradeMeDisplay/Pods-TradeMeDisplay.debug.xcconfig"; sourceTree = "<group>"; };
+		CD22BCC329CEA658FA73B938 /* Pods-TradeMeDisplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMeDisplay.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradeMeDisplay/Pods-TradeMeDisplay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5E01793F3D41B9B8752B09 /* libPods-TradeMeDisplay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		446290CB377B7AA6EEBFA469 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EC811FEC19533C52F1FA1E2 /* libPods-TradeMeDisplay.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56B3603A1E6A7C86004E0126 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				56B3605F1E6A7C86004E0126 /* TradeMeDisplayTests */,
 				56B3606A1E6A7C86004E0126 /* TradeMeDisplayUITests */,
 				56B360441E6A7C86004E0126 /* Products */,
+				F1EB3FAF3EB9A2AD5B06A66F /* Pods */,
+				446290CB377B7AA6EEBFA469 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,11 +132,19 @@
 				56B3604A1E6A7C86004E0126 /* AppDelegate.m */,
 				56B3604C1E6A7C86004E0126 /* ViewController.h */,
 				56B3604D1E6A7C86004E0126 /* ViewController.m */,
+				56724DA91E6B62A9007F6C57 /* NSDictionary+SafeConvert.h */,
+				56724DAA1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m */,
 				56B3604F1E6A7C86004E0126 /* Main.storyboard */,
 				56B360521E6A7C86004E0126 /* Assets.xcassets */,
 				56B360541E6A7C86004E0126 /* LaunchScreen.storyboard */,
 				56B360571E6A7C86004E0126 /* Info.plist */,
 				56B360461E6A7C86004E0126 /* Supporting Files */,
+				566F02AD1E6AC420009554E8 /* TMDataStore.h */,
+				566F02AE1E6AC420009554E8 /* TMDataStore.m */,
+				566F02B01E6B4546009554E8 /* TMNetworkService.h */,
+				566F02B11E6B4546009554E8 /* TMNetworkService.m */,
+				56724DAC1E6B6304007F6C57 /* TMCategory.h */,
+				56724DAD1E6B6304007F6C57 /* TMCategory.m */,
 			);
 			path = TradeMeDisplay;
 			sourceTree = "<group>";
@@ -140,6 +175,15 @@
 			path = TradeMeDisplayUITests;
 			sourceTree = "<group>";
 		};
+		F1EB3FAF3EB9A2AD5B06A66F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E06F3CB9DD52A1103052609 /* Pods-TradeMeDisplay.debug.xcconfig */,
+				CD22BCC329CEA658FA73B938 /* Pods-TradeMeDisplay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56B360701E6A7C86004E0126 /* Build configuration list for PBXNativeTarget "TradeMeDisplay" */;
 			buildPhases = (
+				56BD1166978CADD38191D140 /* [CP] Check Pods Manifest.lock */,
 				56B3603F1E6A7C86004E0126 /* Sources */,
 				56B360401E6A7C86004E0126 /* Frameworks */,
 				56B360411E6A7C86004E0126 /* Resources */,
+				7E76C093ED97C5BB5379BEE2 /* [CP] Embed Pods Frameworks */,
+				EA4BD8DF5FE7F6B0B7C73AAF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,12 +315,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		56BD1166978CADD38191D140 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E76C093ED97C5BB5379BEE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TradeMeDisplay/Pods-TradeMeDisplay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA4BD8DF5FE7F6B0B7C73AAF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TradeMeDisplay/Pods-TradeMeDisplay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		56B3603F1E6A7C86004E0126 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				566F02AF1E6AC420009554E8 /* TMDataStore.m in Sources */,
 				56B3604E1E6A7C86004E0126 /* ViewController.m in Sources */,
+				56724DAE1E6B6304007F6C57 /* TMCategory.m in Sources */,
+				566F02B21E6B4546009554E8 /* TMNetworkService.m in Sources */,
+				56724DAB1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m in Sources */,
 				56B3604B1E6A7C86004E0126 /* AppDelegate.m in Sources */,
 				56B360481E6A7C86004E0126 /* main.m in Sources */,
 			);
@@ -422,6 +521,7 @@
 		};
 		56B360711E6A7C86004E0126 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E06F3CB9DD52A1103052609 /* Pods-TradeMeDisplay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TradeMeDisplay/Info.plist;
@@ -433,6 +533,7 @@
 		};
 		56B360721E6A7C86004E0126 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD22BCC329CEA658FA73B938 /* Pods-TradeMeDisplay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TradeMeDisplay/Info.plist;
@@ -507,6 +608,7 @@
 				56B360721E6A7C86004E0126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56B360731E6A7C86004E0126 /* Build configuration list for PBXNativeTarget "TradeMeDisplayTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +617,7 @@
 				56B360751E6A7C86004E0126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56B360761E6A7C86004E0126 /* Build configuration list for PBXNativeTarget "TradeMeDisplayUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +626,7 @@
 				56B360781E6A7C86004E0126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
