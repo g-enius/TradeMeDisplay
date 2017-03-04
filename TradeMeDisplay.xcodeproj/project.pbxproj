@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56B360481E6A7C86004E0126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B360471E6A7C86004E0126 /* main.m */; };
+		56B3604B1E6A7C86004E0126 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3604A1E6A7C86004E0126 /* AppDelegate.m */; };
+		56B3604E1E6A7C86004E0126 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3604D1E6A7C86004E0126 /* ViewController.m */; };
+		56B360511E6A7C86004E0126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B3604F1E6A7C86004E0126 /* Main.storyboard */; };
+		56B360531E6A7C86004E0126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B360521E6A7C86004E0126 /* Assets.xcassets */; };
+		56B360561E6A7C86004E0126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B360541E6A7C86004E0126 /* LaunchScreen.storyboard */; };
+		56B360611E6A7C86004E0126 /* TradeMeDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B360601E6A7C86004E0126 /* TradeMeDisplayTests.m */; };
+		56B3606C1E6A7C86004E0126 /* TradeMeDisplayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3606B1E6A7C86004E0126 /* TradeMeDisplayUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56B3605D1E6A7C86004E0126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56B3603B1E6A7C86004E0126 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56B360421E6A7C86004E0126;
+			remoteInfo = TradeMeDisplay;
+		};
+		56B360681E6A7C86004E0126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56B3603B1E6A7C86004E0126 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56B360421E6A7C86004E0126;
+			remoteInfo = TradeMeDisplay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56B360431E6A7C86004E0126 /* TradeMeDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeMeDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B360471E6A7C86004E0126 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		56B360491E6A7C86004E0126 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		56B3604A1E6A7C86004E0126 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		56B3604C1E6A7C86004E0126 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		56B3604D1E6A7C86004E0126 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		56B360501E6A7C86004E0126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		56B360521E6A7C86004E0126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56B360551E6A7C86004E0126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56B360571E6A7C86004E0126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56B3605C1E6A7C86004E0126 /* TradeMeDisplayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMeDisplayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B360601E6A7C86004E0126 /* TradeMeDisplayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TradeMeDisplayTests.m; sourceTree = "<group>"; };
+		56B360621E6A7C86004E0126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56B360671E6A7C86004E0126 /* TradeMeDisplayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMeDisplayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B3606B1E6A7C86004E0126 /* TradeMeDisplayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TradeMeDisplayUITests.m; sourceTree = "<group>"; };
+		56B3606D1E6A7C86004E0126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56B360401E6A7C86004E0126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56B360591E6A7C86004E0126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56B360641E6A7C86004E0126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56B3603A1E6A7C86004E0126 = {
+			isa = PBXGroup;
+			children = (
+				56B360451E6A7C86004E0126 /* TradeMeDisplay */,
+				56B3605F1E6A7C86004E0126 /* TradeMeDisplayTests */,
+				56B3606A1E6A7C86004E0126 /* TradeMeDisplayUITests */,
+				56B360441E6A7C86004E0126 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56B360441E6A7C86004E0126 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56B360431E6A7C86004E0126 /* TradeMeDisplay.app */,
+				56B3605C1E6A7C86004E0126 /* TradeMeDisplayTests.xctest */,
+				56B360671E6A7C86004E0126 /* TradeMeDisplayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56B360451E6A7C86004E0126 /* TradeMeDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				56B360491E6A7C86004E0126 /* AppDelegate.h */,
+				56B3604A1E6A7C86004E0126 /* AppDelegate.m */,
+				56B3604C1E6A7C86004E0126 /* ViewController.h */,
+				56B3604D1E6A7C86004E0126 /* ViewController.m */,
+				56B3604F1E6A7C86004E0126 /* Main.storyboard */,
+				56B360521E6A7C86004E0126 /* Assets.xcassets */,
+				56B360541E6A7C86004E0126 /* LaunchScreen.storyboard */,
+				56B360571E6A7C86004E0126 /* Info.plist */,
+				56B360461E6A7C86004E0126 /* Supporting Files */,
+			);
+			path = TradeMeDisplay;
+			sourceTree = "<group>";
+		};
+		56B360461E6A7C86004E0126 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				56B360471E6A7C86004E0126 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56B3605F1E6A7C86004E0126 /* TradeMeDisplayTests */ = {
+			isa = PBXGroup;
+			children = (
+				56B360601E6A7C86004E0126 /* TradeMeDisplayTests.m */,
+				56B360621E6A7C86004E0126 /* Info.plist */,
+			);
+			path = TradeMeDisplayTests;
+			sourceTree = "<group>";
+		};
+		56B3606A1E6A7C86004E0126 /* TradeMeDisplayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				56B3606B1E6A7C86004E0126 /* TradeMeDisplayUITests.m */,
+				56B3606D1E6A7C86004E0126 /* Info.plist */,
+			);
+			path = TradeMeDisplayUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56B360421E6A7C86004E0126 /* TradeMeDisplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56B360701E6A7C86004E0126 /* Build configuration list for PBXNativeTarget "TradeMeDisplay" */;
+			buildPhases = (
+				56B3603F1E6A7C86004E0126 /* Sources */,
+				56B360401E6A7C86004E0126 /* Frameworks */,
+				56B360411E6A7C86004E0126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TradeMeDisplay;
+			productName = TradeMeDisplay;
+			productReference = 56B360431E6A7C86004E0126 /* TradeMeDisplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56B3605B1E6A7C86004E0126 /* TradeMeDisplayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56B360731E6A7C86004E0126 /* Build configuration list for PBXNativeTarget "TradeMeDisplayTests" */;
+			buildPhases = (
+				56B360581E6A7C86004E0126 /* Sources */,
+				56B360591E6A7C86004E0126 /* Frameworks */,
+				56B3605A1E6A7C86004E0126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56B3605E1E6A7C86004E0126 /* PBXTargetDependency */,
+			);
+			name = TradeMeDisplayTests;
+			productName = TradeMeDisplayTests;
+			productReference = 56B3605C1E6A7C86004E0126 /* TradeMeDisplayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		56B360661E6A7C86004E0126 /* TradeMeDisplayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56B360761E6A7C86004E0126 /* Build configuration list for PBXNativeTarget "TradeMeDisplayUITests" */;
+			buildPhases = (
+				56B360631E6A7C86004E0126 /* Sources */,
+				56B360641E6A7C86004E0126 /* Frameworks */,
+				56B360651E6A7C86004E0126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56B360691E6A7C86004E0126 /* PBXTargetDependency */,
+			);
+			name = TradeMeDisplayUITests;
+			productName = TradeMeDisplayUITests;
+			productReference = 56B360671E6A7C86004E0126 /* TradeMeDisplayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56B3603B1E6A7C86004E0126 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Charles;
+				TargetAttributes = {
+					56B360421E6A7C86004E0126 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					56B3605B1E6A7C86004E0126 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 56B360421E6A7C86004E0126;
+					};
+					56B360661E6A7C86004E0126 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 56B360421E6A7C86004E0126;
+					};
+				};
+			};
+			buildConfigurationList = 56B3603E1E6A7C86004E0126 /* Build configuration list for PBXProject "TradeMeDisplay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56B3603A1E6A7C86004E0126;
+			productRefGroup = 56B360441E6A7C86004E0126 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56B360421E6A7C86004E0126 /* TradeMeDisplay */,
+				56B3605B1E6A7C86004E0126 /* TradeMeDisplayTests */,
+				56B360661E6A7C86004E0126 /* TradeMeDisplayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56B360411E6A7C86004E0126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56B360561E6A7C86004E0126 /* LaunchScreen.storyboard in Resources */,
+				56B360531E6A7C86004E0126 /* Assets.xcassets in Resources */,
+				56B360511E6A7C86004E0126 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56B3605A1E6A7C86004E0126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56B360651E6A7C86004E0126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56B3603F1E6A7C86004E0126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56B3604E1E6A7C86004E0126 /* ViewController.m in Sources */,
+				56B3604B1E6A7C86004E0126 /* AppDelegate.m in Sources */,
+				56B360481E6A7C86004E0126 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56B360581E6A7C86004E0126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56B360611E6A7C86004E0126 /* TradeMeDisplayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56B360631E6A7C86004E0126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56B3606C1E6A7C86004E0126 /* TradeMeDisplayUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56B3605E1E6A7C86004E0126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56B360421E6A7C86004E0126 /* TradeMeDisplay */;
+			targetProxy = 56B3605D1E6A7C86004E0126 /* PBXContainerItemProxy */;
+		};
+		56B360691E6A7C86004E0126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56B360421E6A7C86004E0126 /* TradeMeDisplay */;
+			targetProxy = 56B360681E6A7C86004E0126 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		56B3604F1E6A7C86004E0126 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56B360501E6A7C86004E0126 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		56B360541E6A7C86004E0126 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56B360551E6A7C86004E0126 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56B3606E1E6A7C86004E0126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		56B3606F1E6A7C86004E0126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56B360711E6A7C86004E0126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TradeMeDisplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Charles.TradeMeDisplay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		56B360721E6A7C86004E0126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TradeMeDisplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Charles.TradeMeDisplay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		56B360741E6A7C86004E0126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TradeMeDisplayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Charles.TradeMeDisplayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeMeDisplay.app/TradeMeDisplay";
+			};
+			name = Debug;
+		};
+		56B360751E6A7C86004E0126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TradeMeDisplayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Charles.TradeMeDisplayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeMeDisplay.app/TradeMeDisplay";
+			};
+			name = Release;
+		};
+		56B360771E6A7C86004E0126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TradeMeDisplayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Charles.TradeMeDisplayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TradeMeDisplay;
+			};
+			name = Debug;
+		};
+		56B360781E6A7C86004E0126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TradeMeDisplayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Charles.TradeMeDisplayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TradeMeDisplay;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56B3603E1E6A7C86004E0126 /* Build configuration list for PBXProject "TradeMeDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56B3606E1E6A7C86004E0126 /* Debug */,
+				56B3606F1E6A7C86004E0126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56B360701E6A7C86004E0126 /* Build configuration list for PBXNativeTarget "TradeMeDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56B360711E6A7C86004E0126 /* Debug */,
+				56B360721E6A7C86004E0126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		56B360731E6A7C86004E0126 /* Build configuration list for PBXNativeTarget "TradeMeDisplayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56B360741E6A7C86004E0126 /* Debug */,
+				56B360751E6A7C86004E0126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		56B360761E6A7C86004E0126 /* Build configuration list for PBXNativeTarget "TradeMeDisplayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56B360771E6A7C86004E0126 /* Debug */,
+				56B360781E6A7C86004E0126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56B3603B1E6A7C86004E0126 /* Project object */;
+}
