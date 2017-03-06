@@ -18,6 +18,7 @@
 @property (copy, nonatomic) NSString *startDate;
 @property (copy, nonatomic) NSString *endDate;
 @property (copy, nonatomic) NSString *photoURLString;
+@property (copy, nonatomic) NSString *body;
 
 - (instancetype)initWithJSONDic:(NSDictionary *)jsonDic;
 

@@ -11,6 +11,7 @@
 #import "TMDListingDetailImageCell.h"
 #import "TMDListedItemDetail.h"
 #import "MBProgressHUD.h"
+#import "TMDListingDatalTitleCell.h"
 
 @interface TMDLisingDetailTableViewController ()
 
@@ -60,21 +61,105 @@
 
 #pragma mark - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.detail ? 5 : 0;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.detail ? 1 : 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         TMDListingDetailImageCell * cell =
         [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TMDListingDetailImageCell class])
                                                                            forIndexPath:indexPath];
         [cell setImageWithURLString:self.detail.photoURLString];
         return cell;
-    } else {
-        return [UITableViewCell new];
+    } else if (indexPath.section == 1) {
+        TMDListingDatalTitleCell *cell =
+        [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TMDListingDatalTitleCell class])
+                                        forIndexPath:indexPath];
+        cell.textLabel.text = self.detail.title;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld", self.detail.listingId];
+        return cell;
+
+    } else if (indexPath.section == 2) {
+        TMDListingDatalTitleCell *cell =
+        [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TMDListingDatalTitleCell class])
+                                        forIndexPath:indexPath];
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld$", self.detail.startPrice];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld$", self.detail.buyNowPrice];
+        return cell;
+
+    } else if (indexPath.section == 3) {
+        TMDListingDatalTitleCell *cell =
+        [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TMDListingDatalTitleCell class])
+                                        forIndexPath:indexPath];
+        NSString *startDateString = [self.detail.startDate substringWithRange:NSMakeRange(6, self.detail.startDate.length - 2 - 6)];
+        NSString *endDateString = [self.detail.endDate substringWithRange:NSMakeRange(6, self.detail.endDate.length - 2 - 6)];
+        NSDate *startDate = [NSDate dateWithTimeIntervalSince1970:startDateString.doubleValue];
+        NSDate *endDate = [NSDate dateWithTimeIntervalSince1970:endDateString.doubleValue];
+        
+        static NSDateFormatter *formatter;
+        if (!formatter) {
+            formatter = [NSDateFormatter new];
+            formatter.dateFormat = @"dd/MM/yyyy";
+        }
+        cell.textLabel.text = [formatter stringFromDate:startDate];
+        cell.detailTextLabel.text = [formatter stringFromDate:endDate];
+        
+        return cell;
+    } else if (indexPath.section == 4) {
+        TMDListingDatalTitleCell *cell =
+        [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TMDListingDatalTitleCell class])
+                                        forIndexPath:indexPath];
+        cell.textLabel.text = self.detail.body;
+        cell.textLabel.numberOfLines = 0;
+        cell.detailTextLabel.text = @"";
+        return cell;
     }
     
+    return nil;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"Photo";
+    } else if (section == 1) {
+        return @"Title & ListingId";
+    } else if (section == 2) {
+        return @"Start price & Buy now price";
+    } else if (section == 3) {
+        return @"Start date & End date";
+    } else if (section == 4) {
+        return @"Body";
+    }
+    return @"";
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:
+            return 264;
+        case 1:
+            return 100;
+        case 2:
+            return 100;
+        case 3:
+            return 100;
+        case 4:
+            return 300;
+            
+        default:
+            return CGFLOAT_MIN;
+    }
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 @end

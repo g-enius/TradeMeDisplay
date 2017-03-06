@@ -20,6 +20,7 @@
         self.buyNowPrice = [jsonDic integerForKey:@"BuyNowPrice" defaultValue:0];
         self.startDate = [jsonDic stringForKey:@"StartDate"];
         self.endDate = [jsonDic stringForKey:@"EndDate"];
+        self.body = [jsonDic stringForKey:@"Body"];
         
         NSArray *photos = [jsonDic arrayForKey:@"Photos"];
         if (photos.count > 0 && [photos[0] isKindOfClass:[NSDictionary class]]) {

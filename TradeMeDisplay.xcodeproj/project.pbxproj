@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56274D011E6D6C3600DD80B9 /* TMDListingDatalTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56274D001E6D6C3600DD80B9 /* TMDListingDatalTitleCell.m */; };
 		566556E11E6CAEE1009DC99A /* TMDListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E01E6CAEE1009DC99A /* TMDListing.m */; };
 		566556E41E6CC9E5009DC99A /* TMDSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E31E6CC9E5009DC99A /* TMDSearchResult.m */; };
 		566556E71E6CD5A0009DC99A /* TMDListingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E61E6CD5A0009DC99A /* TMDListingTableViewCell.m */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56274CFF1E6D6C3600DD80B9 /* TMDListingDatalTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingDatalTitleCell.h; sourceTree = "<group>"; };
+		56274D001E6D6C3600DD80B9 /* TMDListingDatalTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingDatalTitleCell.m; sourceTree = "<group>"; };
 		566556DF1E6CAEE1009DC99A /* TMDListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListing.h; sourceTree = "<group>"; };
 		566556E01E6CAEE1009DC99A /* TMDListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListing.m; sourceTree = "<group>"; };
 		566556E21E6CC9E5009DC99A /* TMDSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDSearchResult.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				566556E91E6D1888009DC99A /* TMDLisingDetailTableViewController.m */,
 				566556EC1E6D1AED009DC99A /* TMDListingDetailImageCell.h */,
 				566556ED1E6D1AED009DC99A /* TMDListingDetailImageCell.m */,
+				56274CFF1E6D6C3600DD80B9 /* TMDListingDatalTitleCell.h */,
+				56274D001E6D6C3600DD80B9 /* TMDListingDatalTitleCell.m */,
 			);
 			name = ListingDetailViewController;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56274D011E6D6C3600DD80B9 /* TMDListingDatalTitleCell.m in Sources */,
 				56724DFF1E6B956C007F6C57 /* TMDListingTableViewController.m in Sources */,
 				56724DFC1E6B951A007F6C57 /* TMDCategoryTableViewController.m in Sources */,
 				566556E71E6CD5A0009DC99A /* TMDListingTableViewCell.m in Sources */,
