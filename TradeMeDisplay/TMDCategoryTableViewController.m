@@ -1,32 +1,33 @@
 //
-//  TMDCategoryViewController.m
+//  TMDCategoryTableViewController.m
 //  TradeMeDisplay
 //
 //  Created by Charles on 5/03/17.
 //  Copyright © 2017 Charles. All rights reserved.
 //
 
-#import "TMDCategoryViewController.h"
+#import "TMDCategoryTableViewController.h"
 #import "TMDCategory.h"
 #import "TMDCategoryTableViewCell.h"
 #import "TMDDataStore.h"
 #import "MBProgressHUD.h"
 
-static NSString * const ShowDetailIdentifier = @"ShowDetailIdentifier";
+static NSString * const ShowListingsIdentifier = @"ShowListingsIdentifier";
 
-@interface TMDCategoryViewController ()
+@interface TMDCategoryTableViewController ()
 
 @property (strong, nonatomic) NSArray <TMDCategory *> *dataSource;
 
 @end
 
-@implementation TMDCategoryViewController
+@implementation TMDCategoryTableViewController
 
 #pragma mark - Life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Categories";
     [self fetchCategories];
 }
 
@@ -53,10 +54,14 @@ static NSString * const ShowDetailIdentifier = @"ShowDetailIdentifier";
             self.dataSource = categoriesArray;
             [self.tableView reloadData];
         } else {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Network error"
-                                                                           message:error.description
-                                                                    preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *action = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
+            UIAlertController *alert =
+            [UIAlertController alertControllerWithTitle:@"Network error"
+                                                message:error.localizedDescription
+                                         preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *action =
+            [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
+
             [alert addAction:action];
             [self presentViewController:alert animated:YES completion:nil];
         }
@@ -82,11 +87,11 @@ static NSString * const ShowDetailIdentifier = @"ShowDetailIdentifier";
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:ShowDetailIdentifier]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    if ([segue.identifier isEqualToString:ShowListingsIdentifier]) {
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         if (self.dataSource.count > indexPath.row && self.dataSource[indexPath.row]) {
             TMDCategory *category = self.dataSource[indexPath.row];
-            TMDListingViewController *listingViewController = (TMDListingViewController *)((UINavigationController *)segue.destinationViewController).topViewController;
+            TMDListingTableViewController *listingViewController = (TMDListingTableViewController *)((UINavigationController *)segue.destinationViewController).topViewController;
             listingViewController.categoryNumber = category.number;
             
             listingViewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;

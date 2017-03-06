@@ -15,7 +15,7 @@ static const NSInteger resultCount = 20;
 
 @implementation TMDDataStore
 
-+ (void)fetchCategoriesWithCompletion:(fetchCategoriesCompletion)completion {
++ (void)fetchCategoriesWithCompletion:(FetchCategoriesCompletion)completion {
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     
     parameter[@"depth"]= @(1);
@@ -40,7 +40,7 @@ static const NSInteger resultCount = 20;
 
 
 + (void)searchListsWithCategory:(NSString *)category
-                completion:(searchListingsCompletion)completion {
+                completion:(SearchListingsCompletion)completion {
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     parameter[@"category"] = category;
     parameter[@"rows"] = @(resultCount);
@@ -60,6 +60,23 @@ static const NSInteger resultCount = 20;
             completion(NO, nil,error);
         }
     }];
+}
+
++ (void)retrieveListingDetailsWithLisingId:(NSInteger)listingId
+                                completion:(RetrieveListingDetailCompletion)completion {
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"ListingId"] = @(listingId);
+    
+    [TMDNetworkService retrieveListingDetailWithParameters:parameter
+                                                completion:^(BOOL success, TMDListedItemDetail *detail, NSError *error) {
+                                                    if (success) {
+                                                        if (completion) {
+                                                            completion(YES, detail, nil);
+                                                        }
+                                                    } else if (completion) {
+                                                        completion(NO,nil, error);
+                                                    }
+                                                }];
 }
 
 @end

@@ -1,31 +1,41 @@
 //
-//  TMDListingViewController.m
+//  TMDListingTableViewController.m
 //  TradeMeDisplay
 //
 //  Created by Charles on 5/03/17.
 //  Copyright © 2017 Charles. All rights reserved.
 //
 
-#import "TMDListingViewController.h"
+#import "TMDListingTableViewController.h"
 #import "TMDListing.h"
 #import "TMDDataStore.h"
 #import "TMDListingTableViewCell.h"
+#import "TMDLisingDetailTableViewController.h"
 #import "MBProgressHUD.h"
 
-@interface TMDListingViewController ()
+static NSString * const ShowListingDetailIdentifier = @"ShowListingDetailIdentifier";
+
+@interface TMDListingTableViewController ()
 
 @property (strong, nonatomic, readwrite) NSArray<TMDListing *> *dataSource;
 
 @end
 
-@implementation TMDListingViewController
+@implementation TMDListingTableViewController
 
 #pragma mark - Life cycles
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Listings";
     [self searchListings];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,10 +55,14 @@
                                   self.dataSource = listings;
                                   [self.tableView reloadData];
                               } else {
-                                  UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Network error"
-                                                                                                 message:error.description
-                                                                                          preferredStyle:UIAlertControllerStyleAlert];
-                                  UIAlertAction *action = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
+                                  UIAlertController *alert =
+                                  [UIAlertController alertControllerWithTitle:@"Network error"
+                                                                      message:error.localizedDescription
+                                                               preferredStyle:UIAlertControllerStyleAlert];
+                                  
+                                  UIAlertAction *action =
+                                  [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
+                                  
                                   [alert addAction:action];
                                   [self presentViewController:alert animated:YES completion:nil];
                               }
@@ -71,8 +85,18 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:ShowListingDetailIdentifier]) {
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        if (self.dataSource.count > indexPath.row) {
+            TMDLisingDetailTableViewController *detailViewController =
+            (TMDLisingDetailTableViewController *)segue.destinationViewController;
+            detailViewController.listingId = ((TMDListing *)self.dataSource[indexPath.row]).listingId;
+            
+            detailViewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+            detailViewController.navigationItem.leftItemsSupplementBackButton = YES;
+        }
+    }
 }
 
 @end

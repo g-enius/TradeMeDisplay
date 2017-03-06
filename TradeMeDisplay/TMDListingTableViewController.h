@@ -1,5 +1,5 @@
 //
-//  TMDListingViewController.h
+//  TMDListingTableViewController.h
 //  TradeMeDisplay
 //
 //  Created by Charles on 5/03/17.
@@ -10,7 +10,7 @@
 
 @class TMDListing;
 
-@interface TMDListingViewController : UITableViewController
+@interface TMDListingTableViewController : UITableViewController
 
 @property (strong, nonatomic, readonly) NSArray<TMDListing *> *dataSource;
 

@@ -10,12 +10,15 @@
 		566556E11E6CAEE1009DC99A /* TMDListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E01E6CAEE1009DC99A /* TMDListing.m */; };
 		566556E41E6CC9E5009DC99A /* TMDSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E31E6CC9E5009DC99A /* TMDSearchResult.m */; };
 		566556E71E6CD5A0009DC99A /* TMDListingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E61E6CD5A0009DC99A /* TMDListingTableViewCell.m */; };
+		566556EA1E6D1888009DC99A /* TMDLisingDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E91E6D1888009DC99A /* TMDLisingDetailTableViewController.m */; };
+		566556EE1E6D1AED009DC99A /* TMDListingDetailImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556ED1E6D1AED009DC99A /* TMDListingDetailImageCell.m */; };
+		566556F11E6D1CE5009DC99A /* TMDListedItemDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556F01E6D1CE5009DC99A /* TMDListedItemDetail.m */; };
 		566F02AF1E6AC420009554E8 /* TMDDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 566F02AE1E6AC420009554E8 /* TMDDataStore.m */; };
 		566F02B21E6B4546009554E8 /* TMDNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 566F02B11E6B4546009554E8 /* TMDNetworkService.m */; };
 		56724DAB1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DAA1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m */; };
 		56724DAE1E6B6304007F6C57 /* TMDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DAD1E6B6304007F6C57 /* TMDCategory.m */; };
-		56724DFC1E6B951A007F6C57 /* TMDCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DFB1E6B951A007F6C57 /* TMDCategoryViewController.m */; };
-		56724DFF1E6B956C007F6C57 /* TMDListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DFE1E6B956C007F6C57 /* TMDListingViewController.m */; };
+		56724DFC1E6B951A007F6C57 /* TMDCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DFB1E6B951A007F6C57 /* TMDCategoryTableViewController.m */; };
+		56724DFF1E6B956C007F6C57 /* TMDListingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DFE1E6B956C007F6C57 /* TMDListingTableViewController.m */; };
 		56724E081E6BEEF4007F6C57 /* TMDCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724E071E6BEEF4007F6C57 /* TMDCategoryTableViewCell.m */; };
 		56B360481E6A7C86004E0126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B360471E6A7C86004E0126 /* main.m */; };
 		56B3604B1E6A7C86004E0126 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3604A1E6A7C86004E0126 /* AppDelegate.m */; };
@@ -51,6 +54,12 @@
 		566556E31E6CC9E5009DC99A /* TMDSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDSearchResult.m; sourceTree = "<group>"; };
 		566556E51E6CD5A0009DC99A /* TMDListingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingTableViewCell.h; sourceTree = "<group>"; };
 		566556E61E6CD5A0009DC99A /* TMDListingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingTableViewCell.m; sourceTree = "<group>"; };
+		566556E81E6D1888009DC99A /* TMDLisingDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDLisingDetailTableViewController.h; sourceTree = "<group>"; };
+		566556E91E6D1888009DC99A /* TMDLisingDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDLisingDetailTableViewController.m; sourceTree = "<group>"; };
+		566556EC1E6D1AED009DC99A /* TMDListingDetailImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingDetailImageCell.h; sourceTree = "<group>"; };
+		566556ED1E6D1AED009DC99A /* TMDListingDetailImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingDetailImageCell.m; sourceTree = "<group>"; };
+		566556EF1E6D1CE5009DC99A /* TMDListedItemDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListedItemDetail.h; sourceTree = "<group>"; };
+		566556F01E6D1CE5009DC99A /* TMDListedItemDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListedItemDetail.m; sourceTree = "<group>"; };
 		566F02AD1E6AC420009554E8 /* TMDDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDDataStore.h; sourceTree = "<group>"; };
 		566F02AE1E6AC420009554E8 /* TMDDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDDataStore.m; sourceTree = "<group>"; };
 		566F02B01E6B4546009554E8 /* TMDNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDNetworkService.h; sourceTree = "<group>"; };
@@ -59,10 +68,10 @@
 		56724DAA1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeConvert.m"; sourceTree = "<group>"; };
 		56724DAC1E6B6304007F6C57 /* TMDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDCategory.h; sourceTree = "<group>"; };
 		56724DAD1E6B6304007F6C57 /* TMDCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDCategory.m; sourceTree = "<group>"; };
-		56724DFA1E6B951A007F6C57 /* TMDCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDCategoryViewController.h; sourceTree = "<group>"; };
-		56724DFB1E6B951A007F6C57 /* TMDCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDCategoryViewController.m; sourceTree = "<group>"; };
-		56724DFD1E6B956C007F6C57 /* TMDListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingViewController.h; sourceTree = "<group>"; };
-		56724DFE1E6B956C007F6C57 /* TMDListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingViewController.m; sourceTree = "<group>"; };
+		56724DFA1E6B951A007F6C57 /* TMDCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDCategoryTableViewController.h; sourceTree = "<group>"; };
+		56724DFB1E6B951A007F6C57 /* TMDCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDCategoryTableViewController.m; sourceTree = "<group>"; };
+		56724DFD1E6B956C007F6C57 /* TMDListingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingTableViewController.h; sourceTree = "<group>"; };
+		56724DFE1E6B956C007F6C57 /* TMDListingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingTableViewController.m; sourceTree = "<group>"; };
 		56724E061E6BEEF4007F6C57 /* TMDCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDCategoryTableViewCell.h; sourceTree = "<group>"; };
 		56724E071E6BEEF4007F6C57 /* TMDCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDCategoryTableViewCell.m; sourceTree = "<group>"; };
 		56B360431E6A7C86004E0126 /* TradeMeDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeMeDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +127,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		566556EB1E6D188F009DC99A /* ListingDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				566556E81E6D1888009DC99A /* TMDLisingDetailTableViewController.h */,
+				566556E91E6D1888009DC99A /* TMDLisingDetailTableViewController.m */,
+				566556EC1E6D1AED009DC99A /* TMDListingDetailImageCell.h */,
+				566556ED1E6D1AED009DC99A /* TMDListingDetailImageCell.m */,
+			);
+			name = ListingDetailViewController;
+			sourceTree = "<group>";
+		};
 		56724E001E6B967D007F6C57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +147,8 @@
 				566556E31E6CC9E5009DC99A /* TMDSearchResult.m */,
 				566556DF1E6CAEE1009DC99A /* TMDListing.h */,
 				566556E01E6CAEE1009DC99A /* TMDListing.m */,
+				566556EF1E6D1CE5009DC99A /* TMDListedItemDetail.h */,
+				566556F01E6D1CE5009DC99A /* TMDListedItemDetail.m */,
 				56724DA91E6B62A9007F6C57 /* NSDictionary+SafeConvert.h */,
 				56724DAA1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m */,
 			);
@@ -154,8 +176,8 @@
 		56724E031E6B96B5007F6C57 /* CategoryViewController */ = {
 			isa = PBXGroup;
 			children = (
-				56724DFA1E6B951A007F6C57 /* TMDCategoryViewController.h */,
-				56724DFB1E6B951A007F6C57 /* TMDCategoryViewController.m */,
+				56724DFA1E6B951A007F6C57 /* TMDCategoryTableViewController.h */,
+				56724DFB1E6B951A007F6C57 /* TMDCategoryTableViewController.m */,
 				56724E061E6BEEF4007F6C57 /* TMDCategoryTableViewCell.h */,
 				56724E071E6BEEF4007F6C57 /* TMDCategoryTableViewCell.m */,
 			);
@@ -165,8 +187,8 @@
 		56724E041E6B96D1007F6C57 /* ListingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				56724DFD1E6B956C007F6C57 /* TMDListingViewController.h */,
-				56724DFE1E6B956C007F6C57 /* TMDListingViewController.m */,
+				56724DFD1E6B956C007F6C57 /* TMDListingTableViewController.h */,
+				56724DFE1E6B956C007F6C57 /* TMDListingTableViewController.m */,
 				566556E51E6CD5A0009DC99A /* TMDListingTableViewCell.h */,
 				566556E61E6CD5A0009DC99A /* TMDListingTableViewCell.m */,
 			);
@@ -200,6 +222,7 @@
 			children = (
 				56724E031E6B96B5007F6C57 /* CategoryViewController */,
 				56724E041E6B96D1007F6C57 /* ListingViewController */,
+				566556EB1E6D188F009DC99A /* ListingDetailViewController */,
 				56724E011E6B9687007F6C57 /* DataStore */,
 				56724E021E6B9690007F6C57 /* NetworkService */,
 				56724E001E6B967D007F6C57 /* Models */,
@@ -434,12 +457,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56724DFF1E6B956C007F6C57 /* TMDListingViewController.m in Sources */,
-				56724DFC1E6B951A007F6C57 /* TMDCategoryViewController.m in Sources */,
+				56724DFF1E6B956C007F6C57 /* TMDListingTableViewController.m in Sources */,
+				56724DFC1E6B951A007F6C57 /* TMDCategoryTableViewController.m in Sources */,
 				566556E71E6CD5A0009DC99A /* TMDListingTableViewCell.m in Sources */,
 				566F02AF1E6AC420009554E8 /* TMDDataStore.m in Sources */,
 				56724DAE1E6B6304007F6C57 /* TMDCategory.m in Sources */,
+				566556EE1E6D1AED009DC99A /* TMDListingDetailImageCell.m in Sources */,
 				566556E11E6CAEE1009DC99A /* TMDListing.m in Sources */,
+				566556F11E6D1CE5009DC99A /* TMDListedItemDetail.m in Sources */,
+				566556EA1E6D1888009DC99A /* TMDLisingDetailTableViewController.m in Sources */,
 				566556E41E6CC9E5009DC99A /* TMDSearchResult.m in Sources */,
 				566F02B21E6B4546009554E8 /* TMDNetworkService.m in Sources */,
 				56724DAB1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m in Sources */,

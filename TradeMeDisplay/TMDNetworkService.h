@@ -10,13 +10,16 @@
 
 @class TMDCategory;
 @class TMDSearchResult;
+@class TMDListedItemDetail;
 
-typedef void (^fetchRootCategoryCompletion)(BOOL success, TMDCategory *rootCategory, NSError *error);
-typedef void (^fetchListingCompletion)(BOOL success, TMDSearchResult *result, NSError *error);
+typedef void (^FetchRootCategoryCompletion)(BOOL success, TMDCategory *rootCategory, NSError *error);
+typedef void (^SearchResultCompletion)(BOOL success, TMDSearchResult *result, NSError *error);
+typedef void (^RetrieveListingDetailCompletion)(BOOL success, TMDListedItemDetail *detail, NSError *error);
 
 @interface TMDNetworkService : NSObject
 
-+ (void)fetchRootCategoryWithParameters:(NSDictionary *)parameters completion:(fetchRootCategoryCompletion)completion;
-+ (void)searchResultWithParameters:(NSDictionary *)parameters completion:(fetchListingCompletion)completion;
++ (void)fetchRootCategoryWithParameters:(NSDictionary *)parameters completion:(FetchRootCategoryCompletion)completion;
++ (void)searchResultWithParameters:(NSDictionary *)parameters completion:(SearchResultCompletion)completion;
++ (void)retrieveListingDetailWithParameters:(NSDictionary *)parameters completion:(RetrieveListingDetailCompletion)completion;
 
 @end
