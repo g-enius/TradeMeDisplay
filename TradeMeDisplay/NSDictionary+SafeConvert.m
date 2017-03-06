@@ -22,7 +22,7 @@
         return (NSString *)object;
     }
     
-    //if the server passed a double
+    //if the server passed a double value
     if ([object isKindOfClass:[NSNumber class]]) {
         static NSNumberFormatter *TMDecimalNumberFormatter = nil;
         if (!TMDecimalNumberFormatter) {

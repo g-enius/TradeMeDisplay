@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "TMDListingViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end
 
@@ -16,7 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    UINavigationController *listingNavigationController = splitViewController.viewControllers.lastObject;
+    listingNavigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+    splitViewController.delegate = self;
     return YES;
 }
 
@@ -48,4 +53,34 @@
 }
 
 
+#pragma mark - Split view delegate
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]] && [((UINavigationController *)secondaryViewController).topViewController isKindOfClass:[TMDListingViewController class]] && ((TMDListingViewController *)((UINavigationController *)secondaryViewController).topViewController).dataSource.count == 0) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

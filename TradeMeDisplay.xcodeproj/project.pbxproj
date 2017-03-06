@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		566F02AF1E6AC420009554E8 /* TMDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 566F02AE1E6AC420009554E8 /* TMDataStore.m */; };
-		566F02B21E6B4546009554E8 /* TMNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 566F02B11E6B4546009554E8 /* TMNetworkService.m */; };
+		566556E11E6CAEE1009DC99A /* TMDListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E01E6CAEE1009DC99A /* TMDListing.m */; };
+		566556E41E6CC9E5009DC99A /* TMDSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E31E6CC9E5009DC99A /* TMDSearchResult.m */; };
+		566556E71E6CD5A0009DC99A /* TMDListingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E61E6CD5A0009DC99A /* TMDListingTableViewCell.m */; };
+		566F02AF1E6AC420009554E8 /* TMDDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 566F02AE1E6AC420009554E8 /* TMDDataStore.m */; };
+		566F02B21E6B4546009554E8 /* TMDNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 566F02B11E6B4546009554E8 /* TMDNetworkService.m */; };
 		56724DAB1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DAA1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m */; };
-		56724DAE1E6B6304007F6C57 /* TMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DAD1E6B6304007F6C57 /* TMCategory.m */; };
+		56724DAE1E6B6304007F6C57 /* TMDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DAD1E6B6304007F6C57 /* TMDCategory.m */; };
+		56724DFC1E6B951A007F6C57 /* TMDCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DFB1E6B951A007F6C57 /* TMDCategoryViewController.m */; };
+		56724DFF1E6B956C007F6C57 /* TMDListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724DFE1E6B956C007F6C57 /* TMDListingViewController.m */; };
+		56724E081E6BEEF4007F6C57 /* TMDCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56724E071E6BEEF4007F6C57 /* TMDCategoryTableViewCell.m */; };
 		56B360481E6A7C86004E0126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B360471E6A7C86004E0126 /* main.m */; };
 		56B3604B1E6A7C86004E0126 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3604A1E6A7C86004E0126 /* AppDelegate.m */; };
-		56B3604E1E6A7C86004E0126 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3604D1E6A7C86004E0126 /* ViewController.m */; };
 		56B360511E6A7C86004E0126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B3604F1E6A7C86004E0126 /* Main.storyboard */; };
 		56B360531E6A7C86004E0126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B360521E6A7C86004E0126 /* Assets.xcassets */; };
 		56B360561E6A7C86004E0126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B360541E6A7C86004E0126 /* LaunchScreen.storyboard */; };
@@ -40,20 +45,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		566F02AD1E6AC420009554E8 /* TMDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDataStore.h; sourceTree = "<group>"; };
-		566F02AE1E6AC420009554E8 /* TMDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataStore.m; sourceTree = "<group>"; };
-		566F02B01E6B4546009554E8 /* TMNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMNetworkService.h; sourceTree = "<group>"; };
-		566F02B11E6B4546009554E8 /* TMNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMNetworkService.m; sourceTree = "<group>"; };
+		566556DF1E6CAEE1009DC99A /* TMDListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListing.h; sourceTree = "<group>"; };
+		566556E01E6CAEE1009DC99A /* TMDListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListing.m; sourceTree = "<group>"; };
+		566556E21E6CC9E5009DC99A /* TMDSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDSearchResult.h; sourceTree = "<group>"; };
+		566556E31E6CC9E5009DC99A /* TMDSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDSearchResult.m; sourceTree = "<group>"; };
+		566556E51E6CD5A0009DC99A /* TMDListingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingTableViewCell.h; sourceTree = "<group>"; };
+		566556E61E6CD5A0009DC99A /* TMDListingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingTableViewCell.m; sourceTree = "<group>"; };
+		566F02AD1E6AC420009554E8 /* TMDDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDDataStore.h; sourceTree = "<group>"; };
+		566F02AE1E6AC420009554E8 /* TMDDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDDataStore.m; sourceTree = "<group>"; };
+		566F02B01E6B4546009554E8 /* TMDNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDNetworkService.h; sourceTree = "<group>"; };
+		566F02B11E6B4546009554E8 /* TMDNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDNetworkService.m; sourceTree = "<group>"; };
 		56724DA91E6B62A9007F6C57 /* NSDictionary+SafeConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeConvert.h"; sourceTree = "<group>"; };
 		56724DAA1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeConvert.m"; sourceTree = "<group>"; };
-		56724DAC1E6B6304007F6C57 /* TMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCategory.h; sourceTree = "<group>"; };
-		56724DAD1E6B6304007F6C57 /* TMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCategory.m; sourceTree = "<group>"; };
+		56724DAC1E6B6304007F6C57 /* TMDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDCategory.h; sourceTree = "<group>"; };
+		56724DAD1E6B6304007F6C57 /* TMDCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDCategory.m; sourceTree = "<group>"; };
+		56724DFA1E6B951A007F6C57 /* TMDCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDCategoryViewController.h; sourceTree = "<group>"; };
+		56724DFB1E6B951A007F6C57 /* TMDCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDCategoryViewController.m; sourceTree = "<group>"; };
+		56724DFD1E6B956C007F6C57 /* TMDListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingViewController.h; sourceTree = "<group>"; };
+		56724DFE1E6B956C007F6C57 /* TMDListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingViewController.m; sourceTree = "<group>"; };
+		56724E061E6BEEF4007F6C57 /* TMDCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDCategoryTableViewCell.h; sourceTree = "<group>"; };
+		56724E071E6BEEF4007F6C57 /* TMDCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDCategoryTableViewCell.m; sourceTree = "<group>"; };
 		56B360431E6A7C86004E0126 /* TradeMeDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeMeDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B360471E6A7C86004E0126 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56B360491E6A7C86004E0126 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56B3604A1E6A7C86004E0126 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		56B3604C1E6A7C86004E0126 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		56B3604D1E6A7C86004E0126 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		56B360501E6A7C86004E0126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56B360521E6A7C86004E0126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56B360551E6A7C86004E0126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,6 +118,61 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		56724E001E6B967D007F6C57 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56724DAC1E6B6304007F6C57 /* TMDCategory.h */,
+				56724DAD1E6B6304007F6C57 /* TMDCategory.m */,
+				566556E21E6CC9E5009DC99A /* TMDSearchResult.h */,
+				566556E31E6CC9E5009DC99A /* TMDSearchResult.m */,
+				566556DF1E6CAEE1009DC99A /* TMDListing.h */,
+				566556E01E6CAEE1009DC99A /* TMDListing.m */,
+				56724DA91E6B62A9007F6C57 /* NSDictionary+SafeConvert.h */,
+				56724DAA1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		56724E011E6B9687007F6C57 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				566F02AD1E6AC420009554E8 /* TMDDataStore.h */,
+				566F02AE1E6AC420009554E8 /* TMDDataStore.m */,
+			);
+			name = DataStore;
+			sourceTree = "<group>";
+		};
+		56724E021E6B9690007F6C57 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				566F02B01E6B4546009554E8 /* TMDNetworkService.h */,
+				566F02B11E6B4546009554E8 /* TMDNetworkService.m */,
+			);
+			name = NetworkService;
+			sourceTree = "<group>";
+		};
+		56724E031E6B96B5007F6C57 /* CategoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				56724DFA1E6B951A007F6C57 /* TMDCategoryViewController.h */,
+				56724DFB1E6B951A007F6C57 /* TMDCategoryViewController.m */,
+				56724E061E6BEEF4007F6C57 /* TMDCategoryTableViewCell.h */,
+				56724E071E6BEEF4007F6C57 /* TMDCategoryTableViewCell.m */,
+			);
+			name = CategoryViewController;
+			sourceTree = "<group>";
+		};
+		56724E041E6B96D1007F6C57 /* ListingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				56724DFD1E6B956C007F6C57 /* TMDListingViewController.h */,
+				56724DFE1E6B956C007F6C57 /* TMDListingViewController.m */,
+				566556E51E6CD5A0009DC99A /* TMDListingTableViewCell.h */,
+				566556E61E6CD5A0009DC99A /* TMDListingTableViewCell.m */,
+			);
+			name = ListingViewController;
+			sourceTree = "<group>";
+		};
 		56B3603A1E6A7C86004E0126 = {
 			isa = PBXGroup;
 			children = (
@@ -128,23 +198,16 @@
 		56B360451E6A7C86004E0126 /* TradeMeDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				56724E031E6B96B5007F6C57 /* CategoryViewController */,
+				56724E041E6B96D1007F6C57 /* ListingViewController */,
+				56724E011E6B9687007F6C57 /* DataStore */,
+				56724E021E6B9690007F6C57 /* NetworkService */,
+				56724E001E6B967D007F6C57 /* Models */,
 				56B360491E6A7C86004E0126 /* AppDelegate.h */,
 				56B3604A1E6A7C86004E0126 /* AppDelegate.m */,
-				56B3604C1E6A7C86004E0126 /* ViewController.h */,
-				56B3604D1E6A7C86004E0126 /* ViewController.m */,
-				56724DA91E6B62A9007F6C57 /* NSDictionary+SafeConvert.h */,
-				56724DAA1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m */,
 				56B3604F1E6A7C86004E0126 /* Main.storyboard */,
 				56B360521E6A7C86004E0126 /* Assets.xcassets */,
-				56B360541E6A7C86004E0126 /* LaunchScreen.storyboard */,
-				56B360571E6A7C86004E0126 /* Info.plist */,
 				56B360461E6A7C86004E0126 /* Supporting Files */,
-				566F02AD1E6AC420009554E8 /* TMDataStore.h */,
-				566F02AE1E6AC420009554E8 /* TMDataStore.m */,
-				566F02B01E6B4546009554E8 /* TMNetworkService.h */,
-				566F02B11E6B4546009554E8 /* TMNetworkService.m */,
-				56724DAC1E6B6304007F6C57 /* TMCategory.h */,
-				56724DAD1E6B6304007F6C57 /* TMCategory.m */,
 			);
 			path = TradeMeDisplay;
 			sourceTree = "<group>";
@@ -152,6 +215,8 @@
 		56B360461E6A7C86004E0126 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				56B360541E6A7C86004E0126 /* LaunchScreen.storyboard */,
+				56B360571E6A7C86004E0126 /* Info.plist */,
 				56B360471E6A7C86004E0126 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -254,6 +319,7 @@
 				TargetAttributes = {
 					56B360421E6A7C86004E0126 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 35B2KE884X;
 						ProvisioningStyle = Automatic;
 					};
 					56B3605B1E6A7C86004E0126 = {
@@ -368,11 +434,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				566F02AF1E6AC420009554E8 /* TMDataStore.m in Sources */,
-				56B3604E1E6A7C86004E0126 /* ViewController.m in Sources */,
-				56724DAE1E6B6304007F6C57 /* TMCategory.m in Sources */,
-				566F02B21E6B4546009554E8 /* TMNetworkService.m in Sources */,
+				56724DFF1E6B956C007F6C57 /* TMDListingViewController.m in Sources */,
+				56724DFC1E6B951A007F6C57 /* TMDCategoryViewController.m in Sources */,
+				566556E71E6CD5A0009DC99A /* TMDListingTableViewCell.m in Sources */,
+				566F02AF1E6AC420009554E8 /* TMDDataStore.m in Sources */,
+				56724DAE1E6B6304007F6C57 /* TMDCategory.m in Sources */,
+				566556E11E6CAEE1009DC99A /* TMDListing.m in Sources */,
+				566556E41E6CC9E5009DC99A /* TMDSearchResult.m in Sources */,
+				566F02B21E6B4546009554E8 /* TMDNetworkService.m in Sources */,
 				56724DAB1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m in Sources */,
+				56724E081E6BEEF4007F6C57 /* TMDCategoryTableViewCell.m in Sources */,
 				56B3604B1E6A7C86004E0126 /* AppDelegate.m in Sources */,
 				56B360481E6A7C86004E0126 /* main.m in Sources */,
 			);
@@ -524,6 +595,7 @@
 			baseConfigurationReference = 9E06F3CB9DD52A1103052609 /* Pods-TradeMeDisplay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 35B2KE884X;
 				INFOPLIST_FILE = TradeMeDisplay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Charles.TradeMeDisplay;
@@ -536,6 +608,7 @@
 			baseConfigurationReference = CD22BCC329CEA658FA73B938 /* Pods-TradeMeDisplay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 35B2KE884X;
 				INFOPLIST_FILE = TradeMeDisplay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Charles.TradeMeDisplay;

@@ -10,4 +10,11 @@
 
 @interface NSDictionary (SafeConvert)
 
+- (NSString *)stringForKey:(NSString *)key;
+- (NSArray *)arrayForKey:(NSString *)key;
+- (BOOL)boolForKey:(NSString *)key defaultValue:(BOOL)defaultValue;
+- (NSInteger)integerForKey:(NSString *)key defaultValue:(NSInteger)defaultValue;
+
+
+
 @end
