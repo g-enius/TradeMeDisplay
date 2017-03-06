@@ -45,28 +45,22 @@ static NSString * const ShowDetailIdentifier = @"ShowDetailIdentifier";
 - (void)fetchCategories
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    __weak typeof(self) weakSelf = self;
     
-    [TMDDataStore fetchCategoriesWithDepth:1 region:0 with_counts:NO completion:^(BOOL success, NSArray *categoriesArray, NSError *error) {
-        __strong typeof(weakSelf) strongSelf = weakSelf;
+    [TMDDataStore fetchCategoriesWithCompletion:^(BOOL success, NSArray *categoriesArray, NSError *error) {
         
-        [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (success) {
-            strongSelf.dataSource = categoriesArray;
-            [strongSelf.tableView reloadData];
+            self.dataSource = categoriesArray;
+            [self.tableView reloadData];
         } else {
-            [self showAlertWithMessage:error.description];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Network error"
+                                                                           message:error.description
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:action];
+            [self presentViewController:alert animated:YES completion:nil];
         }
     }];
-}
-
-- (void)showAlertWithMessage:(NSString *)message {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Network error"
-                                                                   message:message
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
-    [alert addAction:action];
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
@@ -87,7 +81,6 @@ static NSString * const ShowDetailIdentifier = @"ShowDetailIdentifier";
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:ShowDetailIdentifier]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
@@ -105,40 +98,3 @@ static NSString * const ShowDetailIdentifier = @"ShowDetailIdentifier";
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

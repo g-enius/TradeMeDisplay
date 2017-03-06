@@ -29,8 +29,6 @@ static NSString * const ListingErrorDomain = @"ListingErrorDomain";
 + (void)fetchRootCategoryWithParameters:(NSDictionary *)parameters completion:(fetchRootCategoryCompletion)completion
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    [manager.requestSerializer setValue:REQUEST_HEADER_VAULE forHTTPHeaderField:RequestHeader];
     
     [manager GET:CategoryURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
@@ -52,7 +50,7 @@ static NSString * const ListingErrorDomain = @"ListingErrorDomain";
 
 + (void)searchResultWithParameters:(NSDictionary *)parameters completion:(fetchListingCompletion)completion {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    //Authorization
     [manager.requestSerializer setValue:REQUEST_HEADER_VAULE forHTTPHeaderField:RequestHeader];
     
     [manager GET:ListingURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

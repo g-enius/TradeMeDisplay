@@ -37,20 +37,8 @@
 
 - (void)searchListings {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [TMDDataStore searchListsWithBuy:@"All"
-                            category:self.categoryNumber
-                           clearance:@"All"
-                           condition:@"All"
-                             expired:NO
-                           listed_as:@"All"
-                      member_listing:0 page:1
-                                 pay:@"All"
-                          photo_size:@"Thumbnail"
-                 return_did_you_mean:NO
-                       return_metada:NO
-                     shipping_method:@"All"
-                          sort_order:@"Default"
-                          completion:^(BOOL success, NSArray<TMDListing *> *listings, NSError *error) {
+    [TMDDataStore searchListsWithCategory:self.categoryNumber
+                               completion:^(BOOL success, NSArray<TMDListing *> *listings, NSError *error) {
                               [MBProgressHUD hideHUDForView:self.view animated:YES];
                               
                               if (success) {
@@ -82,16 +70,5 @@
     
     return cell;
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
