@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TMDListingTableViewController.h"
+#import "TMDCategoryTableViewController.h"
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
@@ -56,7 +57,7 @@
 #pragma mark - Split view delegate
 
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
-    if ([secondaryViewController isKindOfClass:[UINavigationController class]] && [((UINavigationController *)secondaryViewController).topViewController isKindOfClass:[TMDListingTableViewController class]] && ((TMDListingTableViewController *)((UINavigationController *)secondaryViewController).topViewController).dataSource.count == 0) {
+    if ([primaryViewController isKindOfClass:[UINavigationController class]] && [((UINavigationController *)primaryViewController).topViewController isKindOfClass:[TMDCategoryTableViewController class]] && ((TMDCategoryTableViewController *)((UINavigationController *)primaryViewController).topViewController).tableView.indexPathForSelectedRow == nil) {
         return YES;
     } else {
         return NO;
