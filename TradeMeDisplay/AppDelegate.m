@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TMDListingTableViewController.h"
 #import "TMDCategoryTableViewController.h"
+#import "TMDListingDetailTableViewController.h"
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
@@ -57,31 +58,23 @@
 #pragma mark - Split view delegate
 
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
-    if ([primaryViewController isKindOfClass:[UINavigationController class]] && [((UINavigationController *)primaryViewController).topViewController isKindOfClass:[TMDCategoryTableViewController class]] && ((TMDCategoryTableViewController *)((UINavigationController *)primaryViewController).topViewController).tableView.indexPathForSelectedRow == nil) {
-        return YES;
-    } else {
-        return NO;
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]]) {
+        UIViewController *topViewController  = ((UINavigationController *)secondaryViewController).topViewController;
+        if ([topViewController isKindOfClass:[TMDListingTableViewController class]]) {
+            TMDListingTableViewController *listTableViewController = (TMDListingTableViewController *)topViewController;
+            if(listTableViewController.dataSource.count > 0) {
+                return NO;
+            }
+        } else if([topViewController isKindOfClass:[TMDListingDetailTableViewController class]]) {
+            TMDListingDetailTableViewController *listDetailTableViewController = (TMDListingDetailTableViewController *)topViewController;
+            if(listDetailTableViewController.detail) {
+                return NO;
+            }
+        }
     }
+    
+    return YES;
 }
 
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

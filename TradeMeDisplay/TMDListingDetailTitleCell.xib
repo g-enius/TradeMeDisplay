@@ -18,8 +18,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iV-SY-IPw" userLabel="Content View">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F21-ba-GWF">
-                            <rect key="frame" x="10" y="40" width="42" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F21-ba-GWF">
+                            <rect key="frame" x="10" y="40" width="313" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                     <constraints>
                         <constraint firstItem="F21-ba-GWF" firstAttribute="leading" secondItem="5iV-SY-IPw" secondAttribute="leading" constant="10" id="EkD-lo-BGt"/>
                         <constraint firstAttribute="trailing" secondItem="3Ed-bu-dz7" secondAttribute="trailing" constant="10" id="TPT-Bq-oWW"/>
-                        <constraint firstItem="3Ed-bu-dz7" firstAttribute="leading" secondItem="F21-ba-GWF" secondAttribute="trailing" priority="250" constant="271" id="hlI-L0-kQc"/>
+                        <constraint firstItem="3Ed-bu-dz7" firstAttribute="leading" secondItem="F21-ba-GWF" secondAttribute="trailing" id="hlI-L0-kQc"/>
                         <constraint firstItem="F21-ba-GWF" firstAttribute="centerY" secondItem="5iV-SY-IPw" secondAttribute="centerY" id="mGf-oh-Evj"/>
                         <constraint firstItem="3Ed-bu-dz7" firstAttribute="centerY" secondItem="5iV-SY-IPw" secondAttribute="centerY" id="rNE-vW-Yw2"/>
                     </constraints>

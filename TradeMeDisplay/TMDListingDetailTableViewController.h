@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TMDListedItemDetail;
 
 @interface TMDListingDetailTableViewController : UITableViewController
 
 @property (assign, nonatomic) NSInteger listingId;
+@property (strong, nonatomic) TMDListedItemDetail *detail;
 
 @end

@@ -30,9 +30,9 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58Y-Ej-tXO">
-                            <rect key="frame" x="170" y="10" width="205" height="24"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58Y-Ej-tXO">
+                            <rect key="frame" x="170" y="10" width="205" height="79"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -43,6 +43,7 @@
                         <constraint firstAttribute="trailing" secondItem="bGN-pX-keu" secondAttribute="trailing" id="FCX-DQ-Snm"/>
                         <constraint firstItem="58Y-Ej-tXO" firstAttribute="leading" secondItem="JKW-dZ-V7B" secondAttribute="trailing" constant="10" id="KvA-Tq-DwK"/>
                         <constraint firstAttribute="bottom" secondItem="JKW-dZ-V7B" secondAttribute="bottom" id="LGz-E0-bpI"/>
+                        <constraint firstItem="bGN-pX-keu" firstAttribute="top" secondItem="58Y-Ej-tXO" secondAttribute="bottom" id="UFs-o0-4cs"/>
                         <constraint firstAttribute="trailing" secondItem="58Y-Ej-tXO" secondAttribute="trailing" id="VHA-oa-a5p"/>
                         <constraint firstItem="JKW-dZ-V7B" firstAttribute="top" secondItem="4aM-jO-EF9" secondAttribute="top" id="pIC-D9-Wnh"/>
                         <constraint firstItem="58Y-Ej-tXO" firstAttribute="top" secondItem="4aM-jO-EF9" secondAttribute="top" constant="10" id="udb-84-9eG"/>

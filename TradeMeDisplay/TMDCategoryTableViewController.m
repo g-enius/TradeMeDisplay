@@ -15,14 +15,13 @@
 
 static NSString * const ShowListingsIdentifier = @"ShowListingsIdentifier";
 
-@interface TMDCategoryTableViewController () <UISearchResultsUpdating, UISearchBarDelegate>
+@interface TMDCategoryTableViewController () <UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate>
 
 @property (strong, nonatomic) NSArray <TMDCategory *> *dataSource;
 
 @property (strong, nonatomic) TMDListingTableViewController *searchResultViewController;
 @property (strong, nonatomic) UISearchController *searchController;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-
 
 @end
 
@@ -59,6 +58,7 @@ static NSString * const ShowListingsIdentifier = @"ShowListingsIdentifier";
     
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -116,11 +116,18 @@ static NSString * const ShowListingsIdentifier = @"ShowListingsIdentifier";
         [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([TMDListingDetailTableViewController class])];
         if (self.searchResultViewController.dataSource.count > indexPath.row) {
             detailViewController.listingId = ((TMDListing *)self.searchResultViewController.dataSource[indexPath.row]).listingId;
+            detailViewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+            detailViewController.navigationItem.leftItemsSupplementBackButton = YES;
             
-            [self.navigationController pushViewController:detailViewController animated:YES];
+            if (self.splitViewController.isCollapsed) {
+                [self.navigationController pushViewController:detailViewController animated:YES];
+            } else {
+                UINavigationController *detailNaviOfSplitVC = self.splitViewController.viewControllers.lastObject;
+                [detailNaviOfSplitVC setViewControllers:@[detailViewController] animated:NO];
+            }
         }
     }
-    
+    [self.searchController.searchBar resignFirstResponder];
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 

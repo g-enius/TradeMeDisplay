@@ -19,7 +19,6 @@
 @interface TMDListingDetailTableViewController ()
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
-@property (strong, nonatomic) TMDListedItemDetail *detail;
 
 @end
 
@@ -162,7 +161,8 @@
         case 3:
             return 100;
         case 4:
-            return 300;
+            //TODO AUTO CALCULATION
+            return 400;
             
         default:
             return CGFLOAT_MIN;
