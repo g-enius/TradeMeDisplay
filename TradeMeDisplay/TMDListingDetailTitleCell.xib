@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TMDListingDetailTitleCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iV-SY-IPw" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F21-ba-GWF">
+                            <rect key="frame" x="10" y="40" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ed-bu-dz7">
+                            <rect key="frame" x="323" y="40" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="F21-ba-GWF" firstAttribute="leading" secondItem="5iV-SY-IPw" secondAttribute="leading" constant="10" id="EkD-lo-BGt"/>
+                        <constraint firstAttribute="trailing" secondItem="3Ed-bu-dz7" secondAttribute="trailing" constant="10" id="TPT-Bq-oWW"/>
+                        <constraint firstItem="3Ed-bu-dz7" firstAttribute="leading" secondItem="F21-ba-GWF" secondAttribute="trailing" priority="250" constant="271" id="hlI-L0-kQc"/>
+                        <constraint firstItem="F21-ba-GWF" firstAttribute="centerY" secondItem="5iV-SY-IPw" secondAttribute="centerY" id="mGf-oh-Evj"/>
+                        <constraint firstItem="3Ed-bu-dz7" firstAttribute="centerY" secondItem="5iV-SY-IPw" secondAttribute="centerY" id="rNE-vW-Yw2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5iV-SY-IPw" secondAttribute="bottom" id="QPb-Kw-wH1"/>
+                <constraint firstItem="5iV-SY-IPw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ti1-Ck-hpK"/>
+                <constraint firstAttribute="trailing" secondItem="5iV-SY-IPw" secondAttribute="trailing" id="YwD-R3-aFp"/>
+                <constraint firstItem="5iV-SY-IPw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tOg-CF-7Pt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="detailLabel" destination="3Ed-bu-dz7" id="DN3-f2-AvI"/>
+                <outlet property="titleLabel" destination="F21-ba-GWF" id="OpN-6y-dDq"/>
+            </connections>
+            <point key="canvasLocation" x="5.5" y="-111"/>
+        </view>
+    </objects>
+</document>

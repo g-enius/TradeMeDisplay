@@ -38,14 +38,24 @@ static const NSInteger resultCount = 20;
     }];
 }
 
-
 + (void)searchListsWithCategory:(NSString *)category
                 completion:(SearchListingsCompletion)completion {
-    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
-    parameter[@"category"] = category;
-    parameter[@"rows"] = @(resultCount);
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"category"] = category;
+    [self searchListsWithParameters:parameters completion:completion];
+}
+
++ (void)searchListsWithSearchString:(NSString *)searchString completion:(SearchListingsCompletion)completion {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"search_string"] = searchString;
+    [self searchListsWithParameters:parameters completion:completion];
+}
+
++ (void)searchListsWithParameters:(NSMutableDictionary *)parameters completion:(SearchListingsCompletion)completion {
     
-    [TMDNetworkService searchResultWithParameters:parameter completion:^(BOOL success, TMDSearchResult *result, NSError *error) {
+    parameters[@"rows"] = @(resultCount);
+    
+    [TMDNetworkService searchResultWithParameters:parameters completion:^(BOOL success, TMDSearchResult *result, NSError *error) {
         if (success) {
             NSMutableArray *listingsArray = [NSMutableArray array];
             for (TMDListing *listing in result.list) {
@@ -60,6 +70,7 @@ static const NSInteger resultCount = 20;
             completion(NO, nil,error);
         }
     }];
+
 }
 
 + (void)retrieveListingDetailsWithLisingId:(NSInteger)listingId

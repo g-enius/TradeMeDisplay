@@ -11,6 +11,4 @@
 
 @interface TMDCategoryTableViewController : UITableViewController
 
-@property (strong, nonatomic) TMDListingTableViewController *listingViewController;
-
 @end

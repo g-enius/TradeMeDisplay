@@ -26,6 +26,9 @@ typedef void (^FetchCategoriesCompletion)(BOOL success, NSArray<TMDCategory *> *
 + (void)searchListsWithCategory:(NSString *)category
                completion:(SearchListingsCompletion)completion;
 
++ (void)searchListsWithSearchString:(NSString *)searchString
+                     completion:(SearchListingsCompletion)completion;
+
 + (void)retrieveListingDetailsWithLisingId:(NSInteger)listingId
                                 completion:(RetrieveListingDetailCompletion)completion;
 

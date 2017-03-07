@@ -10,14 +10,14 @@
 #import "TMDListing.h"
 #import "TMDDataStore.h"
 #import "TMDListingTableViewCell.h"
-#import "TMDLisingDetailTableViewController.h"
-#import "MBProgressHUD.h"
+#import "TMDListingDetailTableViewController.h"
+
+#define LISTING_CELL_NAME NSStringFromClass([TMDListingTableViewCell class])
 
 static NSString * const ShowListingDetailIdentifier = @"ShowListingDetailIdentifier";
 
 @interface TMDListingTableViewController ()
 
-@property (strong, nonatomic, readwrite) NSArray<TMDListing *> *dataSource;
 
 @end
 
@@ -29,7 +29,12 @@ static NSString * const ShowListingDetailIdentifier = @"ShowListingDetailIdentif
     [super viewDidLoad];
     
     self.title = @"Listings";
-    [self searchListings];
+
+    [self.tableView registerNib:[UINib nibWithNibName:LISTING_CELL_NAME bundle:nil] forCellReuseIdentifier:LISTING_CELL_NAME];
+    
+    if (self.categoryNumber.length > 0) {
+        [self searchListings];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -46,26 +51,27 @@ static NSString * const ShowListingDetailIdentifier = @"ShowListingDetailIdentif
 #pragma mark - Search listings accourding to category number
 
 - (void)searchListings {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self.activityIndicator startAnimating];
+
     [TMDDataStore searchListsWithCategory:self.categoryNumber
                                completion:^(BOOL success, NSArray<TMDListing *> *listings, NSError *error) {
-                              [MBProgressHUD hideHUDForView:self.view animated:YES];
-                              
-                              if (success) {
-                                  self.dataSource = listings;
-                                  [self.tableView reloadData];
-                              } else {
-                                  UIAlertController *alert =
-                                  [UIAlertController alertControllerWithTitle:@"Network error"
-                                                                      message:error.localizedDescription
-                                                               preferredStyle:UIAlertControllerStyleAlert];
-                                  
-                                  UIAlertAction *action =
-                                  [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
-                                  
-                                  [alert addAction:action];
-                                  [self presentViewController:alert animated:YES completion:nil];
-                              }
+                                   [self.activityIndicator stopAnimating];
+                                   
+                                   if (success) {
+                                      self.dataSource = listings;
+                                      [self.tableView reloadData];
+                                   } else {
+                                      UIAlertController *alert =
+                                      [UIAlertController alertControllerWithTitle:@"Network error"
+                                                                          message:error.localizedDescription
+                                                                   preferredStyle:UIAlertControllerStyleAlert];
+                                      
+                                      UIAlertAction *action =
+                                      [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
+                                      
+                                      [alert addAction:action];
+                                      [self presentViewController:alert animated:YES completion:nil];
+                                   }
     }];
 }
 
@@ -77,7 +83,7 @@ static NSString * const ShowListingDetailIdentifier = @"ShowListingDetailIdentif
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TMDListingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TMDListingTableViewCell class]) forIndexPath:indexPath];
+    TMDListingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LISTING_CELL_NAME forIndexPath:indexPath];
     if (self.dataSource.count > indexPath.row) {
         [cell fillDataWithListing:self.dataSource[indexPath.row]];
     }
@@ -85,18 +91,19 @@ static NSString * const ShowListingDetailIdentifier = @"ShowListingDetailIdentif
     return cell;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:ShowListingDetailIdentifier]) {
-        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
-        if (self.dataSource.count > indexPath.row) {
-            TMDLisingDetailTableViewController *detailViewController =
-            (TMDLisingDetailTableViewController *)segue.destinationViewController;
-            detailViewController.listingId = ((TMDListing *)self.dataSource[indexPath.row]).listingId;
-            
-            detailViewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-            detailViewController.navigationItem.leftItemsSupplementBackButton = YES;
-        }
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.dataSource.count > indexPath.row) {
+        TMDListingDetailTableViewController *detailViewController = [TMDListingDetailTableViewController new];
+        detailViewController.listingId = ((TMDListing *)self.dataSource[indexPath.row]).listingId;
+        detailViewController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        detailViewController.navigationItem.leftItemsSupplementBackButton = YES;
+        
+        [self.navigationController pushViewController:detailViewController animated:YES];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 @end

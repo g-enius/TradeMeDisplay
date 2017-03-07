@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56274D011E6D6C3600DD80B9 /* TMDListingDatalTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56274D001E6D6C3600DD80B9 /* TMDListingDatalTitleCell.m */; };
+		56274D011E6D6C3600DD80B9 /* TMDListingDetailTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56274D001E6D6C3600DD80B9 /* TMDListingDetailTitleCell.m */; };
+		563C7B531E6EB08E00ED25B6 /* TMDListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563C7B521E6EB08E00ED25B6 /* TMDListingTableViewCell.xib */; };
+		563C7B551E6EBAFC00ED25B6 /* TMDListingDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563C7B541E6EBAFC00ED25B6 /* TMDListingDetailTitleCell.xib */; };
+		563C7B571E6EBB2900ED25B6 /* TMDListingDetailImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563C7B561E6EBB2900ED25B6 /* TMDListingDetailImageCell.xib */; };
 		566556E11E6CAEE1009DC99A /* TMDListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E01E6CAEE1009DC99A /* TMDListing.m */; };
 		566556E41E6CC9E5009DC99A /* TMDSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E31E6CC9E5009DC99A /* TMDSearchResult.m */; };
 		566556E71E6CD5A0009DC99A /* TMDListingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E61E6CD5A0009DC99A /* TMDListingTableViewCell.m */; };
-		566556EA1E6D1888009DC99A /* TMDLisingDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E91E6D1888009DC99A /* TMDLisingDetailTableViewController.m */; };
+		566556EA1E6D1888009DC99A /* TMDListingDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556E91E6D1888009DC99A /* TMDListingDetailTableViewController.m */; };
 		566556EE1E6D1AED009DC99A /* TMDListingDetailImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556ED1E6D1AED009DC99A /* TMDListingDetailImageCell.m */; };
 		566556F11E6D1CE5009DC99A /* TMDListedItemDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 566556F01E6D1CE5009DC99A /* TMDListedItemDetail.m */; };
 		566F02AF1E6AC420009554E8 /* TMDDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 566F02AE1E6AC420009554E8 /* TMDDataStore.m */; };
@@ -49,16 +52,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		56274CFF1E6D6C3600DD80B9 /* TMDListingDatalTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingDatalTitleCell.h; sourceTree = "<group>"; };
-		56274D001E6D6C3600DD80B9 /* TMDListingDatalTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingDatalTitleCell.m; sourceTree = "<group>"; };
+		56274CFF1E6D6C3600DD80B9 /* TMDListingDetailTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingDetailTitleCell.h; sourceTree = "<group>"; };
+		56274D001E6D6C3600DD80B9 /* TMDListingDetailTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingDetailTitleCell.m; sourceTree = "<group>"; };
+		563C7B521E6EB08E00ED25B6 /* TMDListingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMDListingTableViewCell.xib; sourceTree = "<group>"; };
+		563C7B541E6EBAFC00ED25B6 /* TMDListingDetailTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMDListingDetailTitleCell.xib; sourceTree = "<group>"; };
+		563C7B561E6EBB2900ED25B6 /* TMDListingDetailImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMDListingDetailImageCell.xib; sourceTree = "<group>"; };
 		566556DF1E6CAEE1009DC99A /* TMDListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListing.h; sourceTree = "<group>"; };
 		566556E01E6CAEE1009DC99A /* TMDListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListing.m; sourceTree = "<group>"; };
 		566556E21E6CC9E5009DC99A /* TMDSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDSearchResult.h; sourceTree = "<group>"; };
 		566556E31E6CC9E5009DC99A /* TMDSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDSearchResult.m; sourceTree = "<group>"; };
 		566556E51E6CD5A0009DC99A /* TMDListingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingTableViewCell.h; sourceTree = "<group>"; };
 		566556E61E6CD5A0009DC99A /* TMDListingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingTableViewCell.m; sourceTree = "<group>"; };
-		566556E81E6D1888009DC99A /* TMDLisingDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDLisingDetailTableViewController.h; sourceTree = "<group>"; };
-		566556E91E6D1888009DC99A /* TMDLisingDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDLisingDetailTableViewController.m; sourceTree = "<group>"; };
+		566556E81E6D1888009DC99A /* TMDListingDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingDetailTableViewController.h; sourceTree = "<group>"; };
+		566556E91E6D1888009DC99A /* TMDListingDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingDetailTableViewController.m; sourceTree = "<group>"; };
 		566556EC1E6D1AED009DC99A /* TMDListingDetailImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListingDetailImageCell.h; sourceTree = "<group>"; };
 		566556ED1E6D1AED009DC99A /* TMDListingDetailImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDListingDetailImageCell.m; sourceTree = "<group>"; };
 		566556EF1E6D1CE5009DC99A /* TMDListedItemDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDListedItemDetail.h; sourceTree = "<group>"; };
@@ -133,12 +139,14 @@
 		566556EB1E6D188F009DC99A /* ListingDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
-				566556E81E6D1888009DC99A /* TMDLisingDetailTableViewController.h */,
-				566556E91E6D1888009DC99A /* TMDLisingDetailTableViewController.m */,
+				566556E81E6D1888009DC99A /* TMDListingDetailTableViewController.h */,
+				566556E91E6D1888009DC99A /* TMDListingDetailTableViewController.m */,
 				566556EC1E6D1AED009DC99A /* TMDListingDetailImageCell.h */,
 				566556ED1E6D1AED009DC99A /* TMDListingDetailImageCell.m */,
-				56274CFF1E6D6C3600DD80B9 /* TMDListingDatalTitleCell.h */,
-				56274D001E6D6C3600DD80B9 /* TMDListingDatalTitleCell.m */,
+				563C7B561E6EBB2900ED25B6 /* TMDListingDetailImageCell.xib */,
+				56274CFF1E6D6C3600DD80B9 /* TMDListingDetailTitleCell.h */,
+				56274D001E6D6C3600DD80B9 /* TMDListingDetailTitleCell.m */,
+				563C7B541E6EBAFC00ED25B6 /* TMDListingDetailTitleCell.xib */,
 			);
 			name = ListingDetailViewController;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 				56724DFE1E6B956C007F6C57 /* TMDListingTableViewController.m */,
 				566556E51E6CD5A0009DC99A /* TMDListingTableViewCell.h */,
 				566556E61E6CD5A0009DC99A /* TMDListingTableViewCell.m */,
+				563C7B521E6EB08E00ED25B6 /* TMDListingTableViewCell.xib */,
 			);
 			name = ListingViewController;
 			sourceTree = "<group>";
@@ -389,6 +398,9 @@
 			files = (
 				56B360561E6A7C86004E0126 /* LaunchScreen.storyboard in Resources */,
 				56B360531E6A7C86004E0126 /* Assets.xcassets in Resources */,
+				563C7B551E6EBAFC00ED25B6 /* TMDListingDetailTitleCell.xib in Resources */,
+				563C7B571E6EBB2900ED25B6 /* TMDListingDetailImageCell.xib in Resources */,
+				563C7B531E6EB08E00ED25B6 /* TMDListingTableViewCell.xib in Resources */,
 				56B360511E6A7C86004E0126 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56274D011E6D6C3600DD80B9 /* TMDListingDatalTitleCell.m in Sources */,
+				56274D011E6D6C3600DD80B9 /* TMDListingDetailTitleCell.m in Sources */,
 				56724DFF1E6B956C007F6C57 /* TMDListingTableViewController.m in Sources */,
 				56724DFC1E6B951A007F6C57 /* TMDCategoryTableViewController.m in Sources */,
 				566556E71E6CD5A0009DC99A /* TMDListingTableViewCell.m in Sources */,
@@ -471,7 +483,7 @@
 				566556EE1E6D1AED009DC99A /* TMDListingDetailImageCell.m in Sources */,
 				566556E11E6CAEE1009DC99A /* TMDListing.m in Sources */,
 				566556F11E6D1CE5009DC99A /* TMDListedItemDetail.m in Sources */,
-				566556EA1E6D1888009DC99A /* TMDLisingDetailTableViewController.m in Sources */,
+				566556EA1E6D1888009DC99A /* TMDListingDetailTableViewController.m in Sources */,
 				566556E41E6CC9E5009DC99A /* TMDSearchResult.m in Sources */,
 				566F02B21E6B4546009554E8 /* TMDNetworkService.m in Sources */,
 				56724DAB1E6B62A9007F6C57 /* NSDictionary+SafeConvert.m in Sources */,

@@ -12,9 +12,10 @@
 
 @interface TMDListingTableViewController : UITableViewController
 
-@property (strong, nonatomic, readonly) NSArray<TMDListing *> *dataSource;
+@property (strong, nonatomic) NSArray<TMDListing *> *dataSource;
 
 @property (copy, nonatomic) NSString *categoryNumber;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end

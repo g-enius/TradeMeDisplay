@@ -10,13 +10,19 @@
 #import "TMDCategory.h"
 #import "TMDCategoryTableViewCell.h"
 #import "TMDDataStore.h"
-#import "MBProgressHUD.h"
+#import "TMDListingDetailTableViewController.h"
+#import "TMDListing.h"
 
 static NSString * const ShowListingsIdentifier = @"ShowListingsIdentifier";
 
-@interface TMDCategoryTableViewController ()
+@interface TMDCategoryTableViewController () <UISearchResultsUpdating, UISearchBarDelegate>
 
 @property (strong, nonatomic) NSArray <TMDCategory *> *dataSource;
+
+@property (strong, nonatomic) TMDListingTableViewController *searchResultViewController;
+@property (strong, nonatomic) UISearchController *searchController;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 
 @end
 
@@ -28,7 +34,24 @@ static NSString * const ShowListingsIdentifier = @"ShowListingsIdentifier";
     [super viewDidLoad];
     
     self.title = @"Categories";
+    
     [self fetchCategories];
+
+    self.searchResultViewController = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([TMDListingTableViewController class])];
+    // We want ourselves to be the delegate for this filtered table so didSelectRowAtIndexPath is called for both tables.
+    self.searchResultViewController.tableView.delegate = self;
+    
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.searchResultViewController];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.searchBar.delegate = self;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    [self.searchController.searchBar sizeToFit];
+    
+    // Search is now just presenting a view controller. As such, normal view controller
+    // presentation semantics apply. Namely that presentation will walk up the view controller
+    // hierarchy until it finds the root view controller or one that defines a presentation context.
+    //
+    self.definesPresentationContext = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -45,11 +68,10 @@ static NSString * const ShowListingsIdentifier = @"ShowListingsIdentifier";
 
 - (void)fetchCategories
 {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self.activityIndicator startAnimating];
     
     [TMDDataStore fetchCategoriesWithCompletion:^(BOOL success, NSArray *categoriesArray, NSError *error) {
-        
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [self.activityIndicator stopAnimating];
         if (success) {
             self.dataSource = categoriesArray;
             [self.tableView reloadData];
@@ -84,6 +106,24 @@ static NSString * const ShowListingsIdentifier = @"ShowListingsIdentifier";
     return cell;
 }
 
+// here we are the table view delegate for both our main table and filtered table, so we can
+// push from the current navigation controller (resultsTableController's parent view controller
+// is not this UINavigationController)
+//
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView != self.tableView) {
+        TMDListingDetailTableViewController *detailViewController =
+        [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([TMDListingDetailTableViewController class])];
+        if (self.searchResultViewController.dataSource.count > indexPath.row) {
+            detailViewController.listingId = ((TMDListing *)self.searchResultViewController.dataSource[indexPath.row]).listingId;
+            
+            [self.navigationController pushViewController:detailViewController animated:YES];
+        }
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -99,7 +139,31 @@ static NSString * const ShowListingsIdentifier = @"ShowListingsIdentifier";
 
         }
     }
+}
+
+#pragma mark - UISearchResultsUpdating
+// Called when the search bar's text or scope has changed or when the search bar becomes first responder.
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    NSString *searchText = searchController.searchBar.text;
+    NSString *strippedText = [searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
+    if (strippedText.length > 0) {
+        //To Clear result table before loading new ones
+        self.searchResultViewController.dataSource = nil;
+        [self.searchResultViewController.tableView reloadData];
+        [self.searchResultViewController.activityIndicator startAnimating];
+        [TMDDataStore searchListsWithSearchString:searchText completion:^(BOOL success, NSArray<TMDListing *> *listings, NSError *error) {
+            [self.searchResultViewController.activityIndicator stopAnimating];
+            self.searchResultViewController.dataSource = listings;
+            [self.searchResultViewController.tableView reloadData];
+        }];
+    }
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
 }
 
 @end
