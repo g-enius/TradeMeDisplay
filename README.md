@@ -8,5 +8,5 @@ It supoorts instant search and display result directly.
 
 ![alt tag](https://github.com/g-enius/TradeMeDisplay/blob/master/demo.gif)
 ![alt tag](https://github.com/g-enius/TradeMeDisplay/blob/master/demo1.gif)
-![alt tag](https://github.com/g-enius/TradeMeDisplay/blob/master/demo2.gif)
+![alt tag](https://github.com/g-enius/TradeMeDisplay/blob/master/demo3.gif)
 
