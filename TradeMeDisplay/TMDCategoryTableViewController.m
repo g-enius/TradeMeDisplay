@@ -122,8 +122,22 @@ static NSString * const ShowListingsIdentifier = @"ShowListingsIdentifier";
             if (self.splitViewController.isCollapsed) {
                 [self.navigationController pushViewController:detailViewController animated:YES];
             } else {
-                UINavigationController *detailNaviOfSplitVC = self.splitViewController.viewControllers.lastObject;
-                [detailNaviOfSplitVC setViewControllers:@[detailViewController] animated:NO];
+                UIViewController *detailNaviOfSplitVC = self.splitViewController.viewControllers.lastObject;
+                if ([detailNaviOfSplitVC isKindOfClass:[UINavigationController class]]) {
+                    [(UINavigationController *)detailNaviOfSplitVC setViewControllers:@[detailViewController] animated:NO];
+                } else {
+                    //To fix a bug when the detailVC of splitVC is not a navigationController;
+                    //How to reappear this occasion: Search and enter detailedPage in portrait mode, and then turn to
+                    //landscape mode, and then tap another searched result.
+                    UINavigationController *newNavi = [[UINavigationController alloc]initWithRootViewController:detailViewController];
+                    
+                    UINavigationController *firstNavi = self.splitViewController.viewControllers.firstObject;
+                    if (firstNavi) {
+                        self.splitViewController.viewControllers = @[firstNavi, newNavi];
+                    } else {
+                        self.splitViewController.viewControllers = @[newNavi];
+                    }
+                }
             }
         }
     }
