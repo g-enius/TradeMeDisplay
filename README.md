@@ -9,3 +9,7 @@ It also supoorts instant search and displays search results and detialed page of
 
 ![alt tag](https://github.com/g-enius/TradeMeDisplay/blob/master/demo.gif)
 
+There is also a small issue about contentInset of tableView with a searchBar as its tableViewHeader, which is certainly a iOS system bug. Please see the snapshop of Setting App on iOS 10.2.1 (14D27) iPhone 6s Plus.
+
+
+![alt tag](https://github.com/g-enius/TradeMeDisplay/blob/master/systemBug.PNG)
